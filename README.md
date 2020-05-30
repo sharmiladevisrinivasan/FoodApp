@@ -26,10 +26,22 @@ The general functionalities of this application include:
 
                                                       Restaurant Page / Menu Page
 ![restaurant2](https://user-images.githubusercontent.com/30927617/83333151-3276c180-a26d-11ea-93d4-b38e12d9be50.PNG)
+                                                     
+                                                     Add Food Form / Merchant View
 ![restaurant9](https://user-images.githubusercontent.com/30927617/83333257-9ef1c080-a26d-11ea-8c96-b9f9926aea61.PNG)
+
+                                                    Add Restaurant Form / Merchant View
 ![restaurant6](https://user-images.githubusercontent.com/30927617/83333259-9ef1c080-a26d-11ea-861f-91d4a7154f06.PNG)
+
+
 ![restaurant8](https://user-images.githubusercontent.com/30927617/83333260-9ef1c080-a26d-11ea-9caa-c9c88e816244.PNG)
 ![restaurant7](https://user-images.githubusercontent.com/30927617/83333261-9f8a5700-a26d-11ea-8e31-92b31bd52c04.PNG)
+
+                                                    Shopping Cart / Customer View
 ![restaurant3](https://user-images.githubusercontent.com/30927617/83333262-9f8a5700-a26d-11ea-9dbd-7f2e53e427bb.PNG)
+
+                                                    Restaurant Details / Merchant View
 ![restaurant5](https://user-images.githubusercontent.com/30927617/83333263-9f8a5700-a26d-11ea-8004-bd1578204490.PNG)
+
+                                                    Checkout Page / Customer view
 ![restaurant4](https://user-images.githubusercontent.com/30927617/83333264-9f8a5700-a26d-11ea-9598-d421bd76f562.PNG)
