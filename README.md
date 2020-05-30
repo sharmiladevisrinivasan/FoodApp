@@ -23,9 +23,6 @@ The general functionalities of this application include:
   
  HomePage: 
  ![restaurant1](https://user-images.githubusercontent.com/30927617/83333057-ae243e80-a26c-11ea-905d-cd271eff4f55.PNG)
+ Restaurant Page / Menu Page:
+ ![restaurant2](https://user-images.githubusercontent.com/30927617/83333151-3276c180-a26d-11ea-93d4-b38e12d9be50.PNG)
 
-
-
-
-  Restaurant Page / Menu Page:
-  
