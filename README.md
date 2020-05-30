@@ -20,8 +20,11 @@ The general functionalities of this application include:
    * View foods and restaurants for Merchant 
    * Edit already existing food and restaurant for Merchant
    * Delete food and restaurant functionality for Merchant 
-  
+   
+                                                     Home Page
 ![restaurant1](https://user-images.githubusercontent.com/30927617/83333057-ae243e80-a26c-11ea-905d-cd271eff4f55.PNG)
+
+                                                      Restaurant Page / Menu Page
 ![restaurant2](https://user-images.githubusercontent.com/30927617/83333151-3276c180-a26d-11ea-93d4-b38e12d9be50.PNG)
 ![restaurant9](https://user-images.githubusercontent.com/30927617/83333257-9ef1c080-a26d-11ea-8c96-b9f9926aea61.PNG)
 ![restaurant6](https://user-images.githubusercontent.com/30927617/83333259-9ef1c080-a26d-11ea-861f-91d4a7154f06.PNG)
