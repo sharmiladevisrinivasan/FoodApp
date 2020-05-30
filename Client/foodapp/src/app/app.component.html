@@ -1,0 +1,9 @@
+<bs-navbar> {{title}}</bs-navbar>
+<div class="container">
+  <div class="my-overlay" *ngIf="showOverlay">
+    <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+  </div>
+   <alert></alert>
+  <router-outlet></router-outlet>
+
+</div>

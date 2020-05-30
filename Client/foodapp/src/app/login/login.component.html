@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2" *ngIf="loginForm">
+
+       <form [formGroup]= "loginForm" (ngSubmit)="onSubmit()"  >
+        <div class="form-group">
+          <label for="Email">Email</label>
+          <input type="email" id="Email" formControlName="Email" class="form-control">
+        <span
+          *ngIf= "!loginForm.get('Email').valid && loginForm.get('Email').touched " class="help-block">
+          Please enter your Email
+        </span>
+
+        </div>
+        <div class="form-group">
+          <label for="Password">Password</label>
+          <input type="password"  id="Password" formControlName="Password" class="form-control">
+        <span
+          *ngIf= "!loginForm.get('Password').valid && loginForm.get('Password').touched" class="help-block">
+          Please enter your Password
+        </span>
+
+        </div>
+        <button type="button" [disabled]="!loginForm.valid" class="btn btn-primary" (click) = "onSubmit()"> Login </button>
+      </form>
+
+    </div>
+  </div>
+</div>
+</div>

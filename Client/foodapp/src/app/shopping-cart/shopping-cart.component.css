@@ -1,0 +1,31 @@
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-size: cover;
+  margin-left:  auto;
+  margin-right: auto;
+  display: block;
+
+}
+.alert-info{
+ text-align: center;
+ font-size: large;
+ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.card-ID {
+
+ background-color:aliceblue;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 50%;
+}
+
+.card-body {
+  text-align: center;
+}
+
+
+

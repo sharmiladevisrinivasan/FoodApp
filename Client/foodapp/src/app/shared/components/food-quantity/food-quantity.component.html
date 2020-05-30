@@ -1,0 +1,15 @@
+<div class="row no-gutters">
+  <div class="col-2">
+    <button
+      (click)="onRemoveQuantity(food)"
+      class="btn btn-secondary btn-block">-</button>
+  </div>
+  <div class="col text-center quantity">
+    {{food.Quantity}} in cart  </div>
+  <div class="col-2">
+    <button
+      (click)="onAddQuantity(food)"
+      class="btn btn-secondary btn-block">+</button>
+  </div>
+</div>
+

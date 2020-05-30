@@ -1,0 +1,26 @@
+<a routerLink="/admin/restaurants/new" class="btn btn-primary"
+  >Add Restaurant</a>
+
+<br />
+<br />
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Restaurant</th>
+      <th>Cuisine</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let restaurant of restaurants?.restaurant">
+      <td>{{ restaurant.Name_of_the_Restaurant }}</td>
+      <td>{{ restaurant.Cuisine }}</td>
+      <td>
+        <a [routerLink]="['/admin/restaurants/', restaurant._id]"> Edit </a>
+        <a href (click)="deleteRestaurant(restaurant._id)"> Delete </a>
+      </td>
+    </tr>
+  </tbody>
+</table>

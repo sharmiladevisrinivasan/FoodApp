@@ -1,0 +1,174 @@
+<div class="container">
+  <div class="row">
+    <div
+      class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2"
+      *ngIf="restaurant"
+    >
+      <form [formGroup]="restaurantForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="Name_of_the_Restaurant">Name</label>
+          <input
+            type="text"
+            id="Name_of_the_Restaurant"
+            [(ngModel)]="restaurant.Name_of_the_Restaurant"
+            formControlName="Name_of_the_Restaurant"
+            class="form-control"
+          />
+          <span
+            *ngIf="
+              !restaurantForm.get('Name_of_the_Restaurant').valid &&
+              restaurantForm.get('Name_of_the_Restaurant').touched
+            "
+            class="help-block"
+          >
+            Please enter a Name for the Restaurant
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label for="Cuisine">Cuisine</label>
+          <div class="mb-3">
+            <select
+              class="custom-select"
+              [(ngModel)]="restaurant.Cuisine"
+              formControlName="Cuisine"
+            >
+              <option value="">Choose your Cuisine</option>
+              <option *ngFor="let cuisine of Cuisine" [ngValue]="cuisine">{{
+                cuisine
+              }}</option>
+            </select>
+          </div>
+          <span
+            *ngIf="
+              !restaurantForm.get('Cuisine').valid &&
+              restaurantForm.get('Cuisine').touched
+            "
+            class="help-block"
+          >
+            Please Choose your Cuisine
+          </span>
+        </div>
+        <div>
+          <img
+            style="width: 200px; height: 200px;"
+            src="{{ baseUrl }}{{ imgPreview }}"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="restaurantImage">Image</label>
+          <input
+            type="file"
+            [(ngModel)]="restaurant.restaurantImage"
+            formControlName="restaurantImage"
+            (change)="onFileChange($event)"
+            #fileInput
+            id="restaurantImage"
+            class="form-control"
+          />
+          <span
+            *ngIf="
+              !restaurantForm.get('restaurantImage').valid &&
+              restaurantForm.get('restaurantImage').touched
+            "
+            class="help-block"
+          >
+            Please Upload an Image
+          </span>
+        </div>
+        <span
+          *ngIf="
+            (!restaurantForm.valid && restaurantForm.touched) ||
+            (!restaurantForm.valid && submitted)
+          "
+          class="help-block"
+        >
+          Please enter a valid entry
+        </span>
+        <button
+          type="button"
+          [disabled]="!restaurantForm.valid"
+          class="btn btn-primary"
+          (click)="onSubmit()"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div
+    class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2"
+    *ngIf="!restaurant"
+  >
+    <form [formGroup]="restaurantForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="Name_of_the_Restaurant">Name</label>
+        <input
+          type="text"
+          id="Name_of_the_Restaurant"
+          formControlName="Name_of_the_Restaurant"
+          class="form-control"
+        />
+        <span
+          *ngIf="
+            !restaurantForm.get('Name_of_the_Restaurant').valid &&
+            restaurantForm.get('Name_of_the_Restaurant').touched
+          "
+          class="help-block"
+        >
+          Please enter a Name for the Restaurant
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="Cuisine">Cuisine</label>
+        <div class="mb-3">
+          <select class="custom-select" formControlName="Cuisine">
+            <option value="">Choose your Cuisine</option>
+            <option *ngFor="let cuisine of Cuisine" [ngValue]="cuisine">{{
+              cuisine
+            }}</option>
+          </select>
+        </div>
+        <span
+          *ngIf="
+            !restaurantForm.get('Cuisine').valid &&
+            restaurantForm.get('Cuisine').touched
+          "
+          class="help-block"
+        >
+          Please Choose your Cuisine
+        </span>
+      </div>
+
+      <div class="form-group">
+        <label for="restaurantImage">Image</label>
+        <input
+          type="file"
+          formControlName="restaurantImage"
+          (change)="onFileChange($event)"
+          #fileInput
+          id="restaurantImage"
+          class="form-control"
+        />
+        <span
+          *ngIf="
+            !restaurantForm.get('restaurantImage').valid &&
+            restaurantForm.get('restaurantImage').touched
+          "
+          class="help-block"
+        >
+          Please Upload an Image
+        </span>
+      </div>
+      <span
+        *ngIf="!restaurantForm.valid && restaurantForm.touched"
+        class="help-block"
+      >
+        Please enter a valid entry
+      </span>
+      <button type="button" (click)="onSubmit()">Submit</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<h1>Thank you!</h1>
+<p>Here is your Order Summary</p>
+
+<h1>Orders</h1>
+<div id="accordion">
+  <div *ngFor="let order of orders; let i = index" class="card">
+    <div class="card-header">
+      <a class="card-link" data-toggle="collapse">
+          <b> From: </b>  {{order.restaurantName}} &nbsp;&nbsp;&nbsp;&nbsp;
+          <b> Total : {{order.orderDetails.carttotalPrice | currency:'USD' }}</b>
+      </a>
+    </div>
+    <div [id]="order._id" class="collapse show" data-parent="#accordion">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-12 col-lg-8">
+            <div *ngFor="let item of order.orderDetails.items">
+              <div class="card" style="width:auto;">
+                <img class="card-img-top" src="{{baseUrl}}{{item.foodImage}}" alt="Card image" style="width:30%">
+                <div class="card-body">
+                  <h4 class="card-title">{{item.Name}}</h4>
+                  <p class="card-text"><b>Quantity:</b> {{item.Quantity}} x {{item.Price}} = {{item.itemtotalprice | number: '1.2-2' | currency:'USD'}} </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-lg-3" style="margin: 10px;">
+            <div>
+              <address>
+                <h2>Address</h2>
+                <b> Name:</b> {{order.orderDetails.deliveryAddress.Name}}<br>
+                 <b> Address:</b> {{order.orderDetails.deliveryAddress.address1}}<br>
+                 <b> Apartment or Suite:</b> {{order.orderDetails.deliveryAddress.address2}}<br>
+                 <b> State:</b> {{order.orderDetails.deliveryAddress.State}} <br>
+                 <b>Country:</b> {{order.orderDetails.deliveryAddress.Country}} <br>
+                 <b>Zip:</b> {{order.orderDetails.deliveryAddress.Zip}}<br>
+                 <abbr title="Phone"><b>Ph:</b></abbr> {{order.orderDetails.deliveryAddress.Phone}}
+              </address>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

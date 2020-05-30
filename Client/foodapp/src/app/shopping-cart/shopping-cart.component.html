@@ -1,0 +1,41 @@
+<h1> Shopping Cart</h1>
+<div id="accordion">
+    <div class="card-header">
+      <a class="card-link">
+        <p>
+          You have {{foodAddedToCart.length}} items in your shopping cart.
+          <button *ngIf="foodAddedToCart.length"(click)="removeAllFoodFromCart()" class="float-center btn btn-danger btn-sm">Clear Shopping Cart</button>
+        </p>
+      </a>
+    </div>
+    <div class="collapse show" data-parent="#accordion">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-12 col-lg-12">
+            <div  *ngFor="let food of foodAddedToCart;let q= index">
+              <div class="card" style="width:auto;">
+                <img class="card-img-top" src="{{baseUrl}}{{food.foodImage}}" class="thumbnail" width="250px;" height="270px; "/>
+                <div class="card-body">
+                  <h6 class="card-title">{{food.Name}}</h6>
+                  <p><b>Price:</b>  {{food.Price | currency: 'USD'}}</p>
+                  <p class="card-text"><b>Quantity:</b> {{food.Quantity}} </p>
+                  <p class="card-ID">
+                  <food-quantity [food]="food" [foodItems]="foodAddedToCart" (removeFood)="removeFood($event)">
+                  </food-quantity>
+                  </p>
+                  <p class="card-text"><b>Total Price:</b>{{food.Price * food.Quantity | number: '1.2-2' |  currency: 'USD'}}  </p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <a *ngIf="foodAddedToCart.length" routerLink="/check-out" class="btn btn-primary">Check Out</a>
+
+      </div>
+    </div>
+  <div class="alert alert-info" *ngIf="foodAddedToCart.length==0"role="alert">
+    <b>Shopping Cart is Empty!!!</b>
+  </div>
+</div>

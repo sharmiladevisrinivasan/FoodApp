@@ -1,0 +1,27 @@
+<div class="row">
+  <input
+    type="text"
+    class="form-control"
+    name="searchString"
+    placeholder="Type to search..."
+    [(ngModel)]="searchString"
+  />
+  <br /><br />
+  <div
+    *ngFor="let restaurant of restaurants | filter: 'Cuisine':searchString"
+    class="col-sm-12 col-md-6"
+  >
+    <div class="card" [routerLink]="['/restaurants', restaurant._id]">
+      <div class="card-body">
+        <img
+          src="{{ baseUrl }}{{ restaurant.restaurantImage }}"
+          class="card-img-top"
+          alt="..."
+        />
+        <h4 class="card-title">{{ restaurant.Name_of_the_Restaurant }}</h4>
+        <h5 class="card-title">{{ restaurant.Cuisine }}</h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </div>
+</div>

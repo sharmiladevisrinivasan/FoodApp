@@ -1,0 +1,31 @@
+<p>
+  <a routerLink="/admin/foods/new" class="btn btn-primary">Add Food</a>
+</p>
+
+    <input
+    type="text"
+    class="form-control"
+    name="searchString"
+    placeholder="Type to search..."
+    [(ngModel)]="searchString"/>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Food</th>
+        <th>Price</th>
+        <th>Restaurant</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let food of foods | filter : 'Name' : searchString; ">
+        <td>{{food.Name}}</td>
+        <td>{{food.Price | currency:'USD'}}</td>
+        <td> {{food.restaurantName}}</td>
+        <td>
+          <a   [routerLink]= "['/admin/foods/', food._id]" > Edit </a>
+          <a type="button" (click)= "deleteFood(food._id)"><i class="fas fa-trash-alt" ></i></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>

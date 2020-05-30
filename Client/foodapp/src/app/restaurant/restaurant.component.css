@@ -1,0 +1,7 @@
+
+.card-img-top {
+cursor: pointer;
+align-content: center;
+image-rendering: crisp-edges;
+border-image: fill;
+}

@@ -1,0 +1,12 @@
+<div *ngIf="!paidFor">
+  <h5> Continue choosing payment method to place an order!!</h5>
+  <h6> Amount to be Paid:  ${{price}} </h6>
+
+</div>
+
+<div *ngIf=paidFor>
+  <h3>Thank You! Order has been placed Successfully.</h3>
+</div>
+
+
+<div [hidden]="paidFor" #paypal></div>

@@ -1,0 +1,20 @@
+
+.card-footer {
+  padding:10;
+}
+.card{
+  margin-bottom: 30px;
+}
+.card-img-top {
+
+  width: 25vw;
+  height: 25vw;
+  background-size: fill;
+
+}
+
+card-img-top {
+align-content: center;
+image-rendering: crisp-edges;
+border-image: fill;
+}

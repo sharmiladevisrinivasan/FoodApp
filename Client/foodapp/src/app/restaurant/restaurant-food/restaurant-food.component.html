@@ -1,0 +1,37 @@
+<div class="row">
+  <div
+    *ngFor="let food of foods?.food"
+    class="card card-custom col-sm-12 col-md-6"
+  >
+    <div class="cards">
+      <h5 class="card-title">
+        <i> {{ food.Name }} </i>
+      </h5>
+      <div class="card-body">
+        <img
+          src="{{ baseUrl }}{{ food.foodImage }}"
+          class="card-img-top"
+          alt="..."
+        />
+
+        <p class="card-text">
+          <i> {{ food.Description }} </i>
+          <i> <i class="fas fa-utensils"></i> {{ food.Cuisine }} </i>
+          <i><i class="fas fa-dollar-sign"></i>{{ food.Price }} </i>
+        </p>
+      </div>
+      <div class="card-footer">
+        <button
+          *ngIf="!foodService.foodAlreadyExist(food); else updateQuantity"
+          (click)="OnAddCart(food)"
+          class="btn btn-secondary btn-block"
+        >
+          Add to Cart
+        </button>
+        <ng-template #updateQuantity>
+          <food-quantity [food]="food"> </food-quantity>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

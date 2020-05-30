@@ -1,0 +1,9 @@
+.dropdown-toggle{
+  cursor: pointer;
+}
+
+.badge {
+  padding: 5px;
+  border-radius: 40px;
+}
+

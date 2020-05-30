@@ -1,0 +1,10 @@
+body {
+  text-align: center;
+  padding-left: 80px;
+  margin-top: 200px;
+}
+
+.help-block {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: red;
+}
