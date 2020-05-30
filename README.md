@@ -21,4 +21,4 @@ The general functionalities of this application include:
    * Edit already existing food and restaurant for Merchant
    * Delete food and restaurant functionality for Merchant 
   
- HomePage: 
+ HomePage: ![restaurant1](https://user-images.githubusercontent.com/30927617/83333057-ae243e80-a26c-11ea-905d-cd271eff4f55.PNG)
